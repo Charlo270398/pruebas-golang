@@ -1,0 +1,23 @@
+{{define "scriptLinks"}}
+  <script defer src="/public/js/login/index.js"></script><!--INCLUIMOS EL COMPONENTE WEB-->
+{{end}}
+{{define "styles"}}
+  <link rel="stylesheet" type="text/css" href="/public/css/login/index.css">
+{{end}}
+{{define "body"}}
+<main>
+    <form class="form-signin text-center">
+      <div>
+        <h1 class="h2 mb-3 font-weight-normal">Inicio de sesión</h1>
+        <label for="inputEmail" class="sr-only">Correo electrónico</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
+      </div>
+      <button class="btn btn-lg btn-block" type="submit">Acceder</button>
+    </form>
+    <div>
+      <a href="/register">Regístrate ahora</a>
+    </div>
+</main>
+{{end}} 

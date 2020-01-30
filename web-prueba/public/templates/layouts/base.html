@@ -4,6 +4,8 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {{template "scriptLinks" .}}
+        {{template "styles" .}}
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="/public/css/layouts/main.css">
@@ -52,7 +54,7 @@
     <body>
         {{template "body" .}}
     </body>
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <footer class="pt-4 my-md-5 pt-md-5 border-top container">
         <div class="row">
             <div class="col-12 col-md">
             </div>
@@ -64,7 +66,7 @@
                 <li><a class="text-muted" href="#">Team feature</a></li>
                 <li><a class="text-muted" href="#">Stuff for developers</a></li>
                 <li><a class="text-muted" href="#">Another one</a></li>
-                <li><a class="text-muted" href="#">Last time</a></li>
+                <li><a class="text-muted" href="/register">Únete hoy mismo</a></li>
             </ul>
             </div>
             <div class="col-6 col-md">
@@ -79,10 +81,10 @@
             <div class="col-6 col-md">
             <h5>Sobre nosotros</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Team</a></li>
-                <li><a class="text-muted" href="#">Locations</a></li>
-                <li><a class="text-muted" href="#">Privacy</a></li>
-                <li><a class="text-muted" href="#">Terms</a></li>
+                <li><a class="text-muted" href="#">Equipo</a></li>
+                <li><a class="text-muted" href="#">Instituciones socias</a></li>
+                <li><a class="text-muted" href="#">Privacidad</a></li>
+                <li><a class="text-muted" href="/condiciones">Términos y condiciones</a></li>
             </ul>
             </div>
         </div>
