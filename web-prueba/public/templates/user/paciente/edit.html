@@ -1,0 +1,29 @@
+{{define "scriptLinks"}}
+{{end}}
+{{define "styles"}}
+{{end}}
+{{define "body"}}
+<main>
+    {{template "menuPaciente" .}}
+    <form>
+        <h1 class="h2 mb-3 font-weight-normal">Datos del usuario</h1>
+        <div class="form-group">
+        <label>Nombre</label>
+        <input id="name" class="form-control"  aria-describedby="emailHelp" placeholder="nombre" required="">
+        </div>
+        <div class="form-group">
+        <label>Primer apellido</label>
+        <input id="surname1" class="form-control"  aria-describedby="emailHelp" placeholder="apellidos" required="">
+        </div>
+        <div class="form-group">
+        <label>Dirección de correo</label>
+        <input id="email" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="dirección correo" required="">
+        </div>
+        <div class="form-group">
+        <label>DNI</label>
+        <input id="idnumber" class="form-control"  aria-describedby="emailHelp" placeholder="DNI" required="">
+        </div>
+        <button id="submit" type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</main>
+{{end}} 

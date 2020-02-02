@@ -4,15 +4,14 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	"fmt"
 	"encoding/json"
 	models "../models"
+	util "../utils"
 )
 
 //GET
 
 func loginIndexHandler(w http.ResponseWriter, req *http.Request) {
-
 	var tmp = template.Must(
 		template.New("").ParseFiles("public/templates/login/index.html", "public/templates/layouts/base.html"),
 	)
@@ -38,15 +37,12 @@ func loginUserHandler(w http.ResponseWriter, req *http.Request) {
 
 }
 
-type User struct {
-    Firstname string `json:"firstname"`
-    Lastname  string `json:"lastname"`
-    Age       int    `json:"age"`
-}
-
 func registerUserHandler(w http.ResponseWriter, req *http.Request) {
-	var user User
+	var user util.User_json
     json.NewDecoder(req.Body).Decode(&user)
-    fmt.Println("Hola")
-	models.InsertUser()
+	models.InsertUser(user)
+	
+	w.Header().Set("Content-Type", "application/json")
+    w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(true)
 }

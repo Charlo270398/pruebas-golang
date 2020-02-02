@@ -1,36 +1,41 @@
 package models
 
 import (
-	"time"
 	"fmt"
 	"strconv"
+	"time"
+	util "../utils"
 )
 
-type user struct {
-    id   int
-    dni  string
-	nombre  string
-	apellidos  string
-	password  string
-    createdAt time.Time
-}
-
-func InsertUser() bool{
-	fmt.Println("User inserted")
+func InsertUser(user util.User_json) bool{
+	createdAt := time.Now()
+	_ , err := db.Exec(`INSERT INTO usuarios (dni, nombre, apellidos, email, password, created_at) VALUES (?, ?, ?, ?, ?, ?)`, user.Identificacion, 
+	user.Nombre, user.Apellidos, user.Email, user.Password, createdAt)
+	if err == nil {
+		return true
+	} else {
+		fmt.Println(err)
+	}
 	return false;
 }
 
-func DeleteUser() bool{
+func DeleteUser(user_id int) bool{
+	_, err := db.Exec(`DELETE FROM usuarios where id = ` + strconv.Itoa(user_id))
+	if err == nil {
+		return true
+	} else {
+		fmt.Println(err)
+	}
 	return false;
 }
 
-func GetUserById(id int) user{
-	row, err := db.Query(`SELECT id, dni, nombre, apellidos, password, created_at FROM usuarios where id = ` + strconv.Itoa(id)) // check err
-	var u user
+func GetUserById(id int) util.User{
+	row, err := db.Query(`SELECT id, dni, nombre, apellidos, email, password, created_at FROM usuarios where id = ` + strconv.Itoa(id)) // check err
+	var u util.User
 	if err == nil {
 		defer row.Close()
 		row.Next() 
-		row.Scan(&u.id, &u.dni, &u.nombre, &u.apellidos,  &u.password, &u.createdAt)
+		row.Scan(&u.Id, &u.Identificacion, &u.Nombre, &u.Apellidos, &u.Email, &u.Password, &u.CreatedAt)
 		return u
 	} else {
 		fmt.Println(err)
@@ -38,14 +43,14 @@ func GetUserById(id int) user{
 	}
 }
 
-func ShowAllUsers() []user{
-	rows, err := db.Query(`SELECT id, dni, nombre, apellidos, password, created_at FROM usuarios`)
+func ShowAllUsers() []util.User{
+	rows, err := db.Query(`SELECT id, dni, nombre, apellidos, email, password, created_at FROM usuarios`)
 	if err == nil {
 		defer rows.Close()
-		var users []user
+		var users []util.User
 		for rows.Next() {
-			var u user
-			rows.Scan(&u.id, &u.dni, &u.nombre, &u.apellidos,  &u.password, &u.createdAt)
+			var u util.User
+			rows.Scan(&u.Id, &u.Identificacion, &u.Nombre, &u.Apellidos, &u.Email, &u.Password, &u.CreatedAt)
 			users = append(users, u)
 		}
 		return users;

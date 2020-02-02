@@ -1,17 +1,30 @@
-function submit(event){
-    console.log(event.target);
+const cabeceras= {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
 }
-function register(nombre, apellido1, apellido2, mail, identificacion, pass){
+
+function submit(event){
+    let nombre = document.querySelector("#name").value;
+    let apellido1 = document.querySelector("#surname1").value;
+    let apellido2 = document.querySelector("#surname2").value;
+    let identificacion = document.querySelector("#idnumber").value;
+    let email = document.querySelector("#email").value;
+    let password = document.querySelector("#pass").value;
+    if(nombre && apellido1 && apellido2 && identificacion && email && password){
+        register(nombre,apellido1, apellido2, email, identificacion, password);
+    }
+}
+function register(nombre, apellido1, apellido2, email, identificacion, password){
     
     let apellidos = apellido1;
     if(apellido2){
         apellidos += " " + apellido2;
     }
     const url= `/register`;
-      
-    const payload= {name: nombre, surname: apellidos, mail: mail};
+    const payload= {nombre: nombre, identificacion:identificacion, apellidos: apellidos, email: email, password: password};
     const request = {
         method: 'POST', 
+        headers: cabeceras,
         body: JSON.stringify(payload),
     };
     fetch(url,request)

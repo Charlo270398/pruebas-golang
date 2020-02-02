@@ -1,17 +1,61 @@
-{{define "body"}}
-<main class="text-center">
-    <form class="form-signin">
-      <h1 class="h3 mb-3 font-weight-normal">Inicio de sesión</h1>
-      <label for="inputEmail" class="sr-only">Correo electrónico</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="" autofocus="">
-      <label for="inputPassword" class="sr-only">Contraseña</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recuérdame
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
-    </form>
-</main>
+{{define "scriptLinks"}}
 {{end}}
+{{define "styles"}}
+{{end}}
+{{define "body"}}
+<main>
+  <div>
+    <h3>Acceder como</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Enfermer@</h5>
+            <p class="card-text">Consulta, modifica o borra el conjunto los usuarios de la base de datos.</p>
+            <a href="/user/nurse" class="btn btn-primary">Acceder</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Médic@</h5>
+            <p class="card-text">Añade un nuevo usuario a la base de datos.</p>
+            <a href="/user/doctor" class="btn btn-primary">Acceder</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Paciente</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="/user/patient" class="btn btn-primary">Acceder</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Administrador global</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="/user/gadmin" class="btn btn-primary">Acceder</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Administrador</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="/user/admin" class="btn btn-primary">Acceder</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</main>
+{{end}} 

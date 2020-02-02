@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 	dni VARCHAR(9) UNIQUE,
 	nombre VARCHAR(25) NOT NULL,
 	apellidos VARCHAR(50) NOT NULL,
+	email VARCHAR(59) UNIQUE,
 	password VARCHAR(30) NOT NULL,
 	created_at DATETIME,
 	PRIMARY KEY (id)
