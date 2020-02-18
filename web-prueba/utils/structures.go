@@ -25,3 +25,11 @@ type User_json struct {
 type User_id_json struct {
     Id int `json:"user_id"`
 }
+
+type Params_argon2 struct {
+    Memory      uint32
+    Iterations  uint32
+    Parallelism uint8
+    SaltLength  uint32
+    KeyLength   uint32
+}

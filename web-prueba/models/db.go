@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 	nombre VARCHAR(25) NOT NULL,
 	apellidos VARCHAR(50) NOT NULL,
 	email VARCHAR(59) UNIQUE,
-	password VARCHAR(30) NOT NULL,
+	password VARCHAR(100) NOT NULL,
 	created_at DATETIME,
 	PRIMARY KEY (id)
 );`

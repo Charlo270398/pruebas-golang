@@ -7,16 +7,46 @@ import (
 	util "../utils"
 )
 
-func InsertUser(user util.User_json) bool{
+var p = &util.Params_argon2{
+	Memory:      64 * 1024,
+	Iterations:  3,
+	Parallelism: 2,
+	SaltLength:  16,
+	KeyLength:   32,
+}
+
+func LoginUser(email string, password string) bool{
+	user, err := GetUserByEmail(email)
+	if err != nil {
+		util.PrintErrorLog(err)
+		return false;
+	} 
+	match, err := util.Argon2comparePasswordAndHash(password, user.Password)
+    if err != nil {
+        util.PrintErrorLog(err)
+    }
+	return match
+}
+
+func InsertUser(user util.User_json) (inserted bool, err error){
+	//ARGON2
+	encodedHash, err := util.Argon2generateFromPassword(user.Password, p)
+	if err != nil {
+		fmt.Println(err)
+		util.PrintErrorLog(err)
+		return false, err
+	} 
+	//INSERT
 	createdAt := time.Now()
-	_ , err := db.Exec(`INSERT INTO usuarios (dni, nombre, apellidos, email, password, created_at) VALUES (?, ?, ?, ?, ?, ?)`, user.Identificacion, 
-	user.Nombre, user.Apellidos, user.Email, user.Password, createdAt)
+	_ , err = db.Exec(`INSERT INTO usuarios (dni, nombre, apellidos, email, password, created_at) VALUES (?, ?, ?, ?, ?, ?)`, user.Identificacion, 
+	user.Nombre, user.Apellidos, user.Email, encodedHash, createdAt)
 	if err == nil {
-		return true
+		return true, nil
 	} else {
 		fmt.Println(err)
+		util.PrintErrorLog(err)
 	}
-	return false;
+	return false, nil
 }
 
 func DeleteUser(user_id int) bool{
@@ -25,21 +55,36 @@ func DeleteUser(user_id int) bool{
 		return true
 	} else {
 		fmt.Println(err)
+		util.PrintErrorLog(err)
 	}
 	return false;
 }
 
-func GetUserById(id int) util.User{
+func GetUserById(id int) (user util.User, err error){
 	row, err := db.Query(`SELECT id, dni, nombre, apellidos, email, password, created_at FROM usuarios where id = ` + strconv.Itoa(id)) // check err
-	var u util.User
 	if err == nil {
 		defer row.Close()
 		row.Next() 
-		row.Scan(&u.Id, &u.Identificacion, &u.Nombre, &u.Apellidos, &u.Email, &u.Password, &u.CreatedAt)
-		return u
+		row.Scan(&user.Id, &user.Identificacion, &user.Nombre, &user.Apellidos, &user.Email, &user.Password, &user.CreatedAt)
+		return user, err
 	} else {
 		fmt.Println(err)
-		return u
+		util.PrintErrorLog(err)
+		return user, err
+	}
+}
+
+func GetUserByEmail(email string) (user util.User, err error){
+	row, err := db.Query(`SELECT id, dni, nombre, apellidos, email, password, created_at FROM usuarios where email = '` + email + `'`) // check err
+	if err == nil {
+		defer row.Close()
+		row.Next() 
+		row.Scan(&user.Id, &user.Identificacion, &user.Nombre, &user.Apellidos, &user.Email, &user.Password, &user.CreatedAt)
+		return user, err
+	} else {
+		fmt.Println(err)
+		util.PrintErrorLog(err)
+		return user, err
 	}
 }
 

@@ -17,14 +17,15 @@ func LoadRouter() {
 	router := mux.NewRouter()
 
 	//STATIC RESOURCES
-	s := http.StripPrefix("/public/", http.FileServer(http.Dir("./public/")))
-	router.PathPrefix("/public/").Handler(s)
 	http.Handle("/", router)
+	router.
+    PathPrefix("/public/").
+    Handler(http.StripPrefix("/public/", http.FileServer(http.Dir("."+"/public/"))))
 
 	//ADMIN-GLOBAL
 	router.HandleFunc("/user/gadmin", menuAdminHandler).Methods("GET")
 	router.HandleFunc("/user/gadmin/users", getUserListAdminHandler).Methods("GET")
-	router.HandleFunc("/user/gadmin/users/addform", addUserFormGadminHandler).Methods("GET")
+	//router.HandleFunc("/user/gadmin/users/addform", addUserFormGadminHandler).Methods("GET")
 
 	//LOGIN
 	router.HandleFunc("/login", loginIndexHandler).Methods("GET")
@@ -41,7 +42,7 @@ func LoadRouter() {
 	router.HandleFunc("/user/delete", deleteUserHandler).Methods("DELETE")
 
 	//USER-PACIENTE
-	router.HandleFunc("/user/patient", UserPatientHandler).Methods("GET")
+	//router.HandleFunc("/user/patient", userPatientHandler).Methods("GET")
 	router.HandleFunc("/user/patient/edit", editUserPatientHandler).Methods("GET")
 	router.HandleFunc("/user/patient/historial", historialUserHandler).Methods("GET")
 	

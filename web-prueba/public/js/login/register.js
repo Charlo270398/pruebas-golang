@@ -10,12 +10,13 @@ function submit(event){
     let identificacion = document.querySelector("#idnumber").value;
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#pass").value;
-    if(nombre && apellido1 && apellido2 && identificacion && email && password){
+    let condiciones = document.querySelector("#conditions").checked;
+    if(nombre && apellido1 && apellido2 && identificacion && email && password && condiciones){
         register(nombre,apellido1, apellido2, email, identificacion, password);
     }
 }
 function register(nombre, apellido1, apellido2, email, identificacion, password){
-    
+    var result = false;
     let apellidos = apellido1;
     if(apellido2){
         apellidos += " " + apellido2;
@@ -29,15 +30,16 @@ function register(nombre, apellido1, apellido2, email, identificacion, password)
     };
     fetch(url,request)
     .then( response => response.json() )
-    .then( r => {
-        if(!r.error){
-
-        }
-        else{
-            alert(r.error);
-        }
-    })
-    .catch(err => alert(err));
+        .then( r => {
+            if(!r.Error){
+                //Registrado, continuamos a menú
+            }
+            else{
+                alert(r.Error);
+            }
+        })
+        .catch(err => alert(err));
+    return result;
 }
 function init () {
     document.querySelector("#submit").addEventListener('click',submit,false);
