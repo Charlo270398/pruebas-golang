@@ -5,7 +5,7 @@ import (
 	"github.com/gorilla/mux"
 	"net/http"
 	"os"
-	"log"
+	util "../utils"
 )
 
 type Page struct {
@@ -52,8 +52,8 @@ func LoadRouter() {
 		fmt.Println("Defaulting to port", port)
 		//printLog("Initialized at port " + port)
 	}
-
-	if err := http.ListenAndServe(":"+port, router); err != nil {
-		log.Fatal(err)
+	err := http.ListenAndServeTLS(":5000", "cert.crt", "key.key", nil)
+	if err != nil {
+		util.PrintErrorLog(err)
 	}
 }

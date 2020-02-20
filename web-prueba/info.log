@@ -1,139 +1,23 @@
-2020/02/05 15:18:55 Servicio iniciado
-2020/02/05 15:22:06 Servicio iniciado
-2020/02/05 15:22:25 ERROR: &{%!g(uint16=1366) %!g(string=Incorrect string value: '\xFF\xA7\xC4\x1E}\xA0...' for column 'password' at row 1)}
-2020/02/05 15:23:33 Servicio iniciado
-2020/02/05 15:23:55 ERROR: &{%!g(uint16=1366) %!g(string=Incorrect string value: '\xB3\xD9\xC9J1\xBA...' for column 'password' at row 1)}
-2020/02/06 11:53:35 Servicio iniciado
-2020/02/06 12:06:46 Servicio iniciado
-2020/02/06 12:07:21 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry 'elgato_27@hotmail.com' for key 'email')}
-2020/02/06 12:13:09 Servicio iniciado
-2020/02/06 12:45:00 Servicio iniciado
-2020/02/06 12:45:13 ERROR: &{%!g(uint16=1406) %!g(string=Data too long for column 'password' at row 1)}
-2020/02/06 13:03:04 Servicio iniciado
-2020/02/06 13:03:07 Servicio iniciado
-2020/02/06 13:03:39 Servicio iniciado
-2020/02/06 13:36:25 Servicio iniciado
-2020/02/06 13:37:07 Servicio iniciado
-2020/02/06 13:37:20 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/06 13:37:23 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:11:46 Servicio iniciado
-2020/02/09 18:19:08 Servicio iniciado
-2020/02/09 18:19:40 Servicio iniciado
-2020/02/09 18:20:06 Servicio iniciado
-2020/02/09 18:21:52 Servicio iniciado
-2020/02/09 18:23:45 Servicio iniciado
-2020/02/09 18:25:51 Servicio iniciado
-2020/02/09 18:27:25 Servicio iniciado
-2020/02/09 18:27:37 ERROR: %!g(<nil>)
-2020/02/09 18:30:06 Servicio iniciado
-2020/02/09 18:31:22 Servicio iniciado
-2020/02/09 18:33:05 Servicio iniciado
-2020/02/09 18:33:15 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:34:27 Servicio iniciado
-2020/02/09 18:34:54 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:35:02 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:35:41 Servicio iniciado
-2020/02/09 18:36:09 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:36:30 Servicio iniciado
-2020/02/09 18:36:40 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:36:57 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:37:36 Servicio iniciado
-2020/02/09 18:37:49 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:40:34 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry 'elgato_27@hotmail.com' for key 'email')}
-2020/02/09 18:40:38 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry 'elgato_27@hotmail.com' for key 'email')}
-2020/02/09 18:42:02 Servicio iniciado
-2020/02/09 18:42:04 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:42:14 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:42:26 Servicio iniciado
-2020/02/09 18:42:38 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:43:49 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:43:56 Servicio iniciado
-2020/02/09 18:44:03 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:44:15 Servicio iniciado
-2020/02/09 18:48:39 Servicio iniciado
-2020/02/09 18:48:49 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:48:52 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:49:13 Servicio iniciado
-2020/02/09 18:49:26 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:49:38 Servicio iniciado
-2020/02/09 18:49:50 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:49:53 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:51:34 Servicio iniciado
-2020/02/09 18:52:47 Servicio iniciado
-2020/02/09 18:55:03 Servicio iniciado
-2020/02/09 18:55:17 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 18:56:14 Servicio iniciado
-2020/02/09 18:56:57 Servicio iniciado
-2020/02/09 19:11:02 Servicio iniciado
-2020/02/09 19:11:32 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:12:37 Servicio iniciado
-2020/02/09 19:13:04 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:13:06 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:16:21 Servicio iniciado
-2020/02/09 19:18:27 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:19:51 Servicio iniciado
-2020/02/09 19:20:34 Servicio iniciado
-2020/02/09 19:24:01 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:28:41 Servicio iniciado
-2020/02/09 19:29:00 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:29:33 Servicio iniciado
-2020/02/09 19:29:41 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:37:09 Servicio iniciado
-2020/02/09 19:38:00 Servicio iniciado
-2020/02/09 19:38:24 Servicio iniciado
-2020/02/09 19:39:07 Servicio iniciado
-2020/02/09 19:40:05 Servicio iniciado
-2020/02/09 19:41:38 Servicio iniciado
-2020/02/09 19:43:26 Servicio iniciado
-2020/02/09 19:43:59 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:44:44 Servicio iniciado
-2020/02/09 19:45:10 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/09 19:46:21 Servicio iniciado
-2020/02/09 19:47:08 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:52:34 Servicio iniciado
-2020/02/18 12:55:44 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:56:26 Servicio iniciado
-2020/02/18 12:56:29 Servicio iniciado
-2020/02/18 12:57:10 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:57:22 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:57:22 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:58:41 Servicio iniciado
-2020/02/18 12:59:05 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:59:06 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:59:06 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:59:06 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:59:06 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:59:06 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 12:59:41 Servicio iniciado
-2020/02/18 13:00:13 Servicio iniciado
-2020/02/18 13:04:54 Servicio iniciado
-2020/02/18 13:07:46 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 13:10:51 Servicio iniciado
-2020/02/18 13:11:12 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 13:11:50 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 13:12:55 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 13:13:03 ERROR: &{%!g(uint16=1062) %!g(string=Duplicate entry '12345678E' for key 'dni')}
-2020/02/18 13:22:04 Servicio iniciado
-2020/02/18 13:24:21 Servicio iniciado
-2020/02/18 13:24:51 Servicio iniciado
-2020/02/18 13:28:52 Servicio iniciado
-2020/02/18 13:29:24 Servicio iniciado
-2020/02/18 13:30:44 Servicio iniciado
-2020/02/18 13:35:22 Servicio iniciado
-2020/02/18 13:35:27 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:35:27 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'id = elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:35:51 Servicio iniciado
-2020/02/18 13:35:55 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:35:55 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:36:09 Servicio iniciado
-2020/02/18 13:36:13 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:36:13 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:36:30 Servicio iniciado
-2020/02/18 13:36:34 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:36:34 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== elgato_27@hotmail.com' at line 1)}
-2020/02/18 13:36:55 Servicio iniciado
-2020/02/18 13:36:59 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'elgato_27@hotmail.com'' at line 1)}
-2020/02/18 13:36:59 ERROR: &{%!g(uint16=1064) %!g(string=You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'elgato_27@hotmail.com'' at line 1)}
-2020/02/18 13:38:14 Servicio iniciado
-2020/02/18 13:38:27 Servicio iniciado
-2020/02/18 13:44:12 Servicio iniciado
+2020/02/20 12:42:40 Servicio iniciado
+2020/02/20 12:42:40 ERROR: &{%!g(string=open) %!g(string=/cert.pem) %!g(syscall.Errno=2)}
+2020/02/20 13:09:38 Servicio iniciado
+2020/02/20 13:09:38 ERROR: &{%!g(string=open) %!g(string=/cert.crt) %!g(syscall.Errno=2)}
+2020/02/20 13:09:54 Servicio iniciado
+2020/02/20 13:09:54 ERROR: &{%!g(string=open) %!g(string=/cert.crt) %!g(syscall.Errno=2)}
+2020/02/20 13:09:57 Servicio iniciado
+2020/02/20 13:10:30 Servicio iniciado
+2020/02/20 13:10:51 Servicio iniciado
+2020/02/20 13:18:13 Servicio iniciado
+2020/02/20 13:19:12 Servicio iniciado
+2020/02/20 13:19:42 Servicio iniciado
+2020/02/20 13:20:01 Servicio iniciado
+2020/02/20 13:20:25 Servicio iniciado
+2020/02/20 13:20:38 Servicio iniciado
+2020/02/20 13:20:38 ERROR: &{%!g(string=listen) %!g(string=tcp) <nil> <nil> %!g(*net.AddrError=&{missing port in address 8081})}
+2020/02/20 13:20:49 Servicio iniciado
+2020/02/20 13:20:49 ERROR: &{%!g(string=listen) %!g(string=tcp) <nil> <nil> %!g(*net.AddrError=&{missing port in address 8080})}
+2020/02/20 13:21:06 Servicio iniciado
+2020/02/20 13:21:06 ERROR: &{%!g(string=listen) %!g(string=tcp) <nil> <nil> %!g(*net.AddrError=&{missing port in address 5000})}
+2020/02/20 13:21:12 Servicio iniciado
+2020/02/20 13:21:48 Servicio iniciado
+2020/02/20 13:22:17 Servicio iniciado
